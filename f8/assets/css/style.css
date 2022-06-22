@@ -272,6 +272,95 @@ html{
     color: #000;
 }
 
+.model{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.model.open{
+    display: flex;
+}
+
+.model-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100%-32px);
+    min-height: 250px;
+    position:relative;
+}
+
+.model-header {
+    background: #009688;
+    height: 129px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.model-close:hover {
+    background: #ccc;
+    color: #000;
+}
+
+.model-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 11px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.model-body{
+    padding: 16px;
+}
+
+.model-label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.model-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+
+#buy-tickets:hover {
+    opacity: 0.8;
+}
+
+#buy-tickets {
+    width: 100%;
+    background: #009688;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.model-footer{
+    padding: 16px;
+    text-align: right;
+}
+
+.model-footer a{
+    color:#009699;
+}
 /* ============================= footer */
 #footer{
 
