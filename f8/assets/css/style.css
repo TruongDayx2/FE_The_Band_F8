@@ -7,17 +7,44 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
-#main{
-
-}
-
+/* common==== */
 .clear{
     clear:both;
 }
 .text-white{
     color: #fff !important;
 }
+
+.text-center{
+    text-align: center !important;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+
+}
+
+.col{
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-third{
+    width: 33.3333%;
+}
+
+/* main====== */
+#main{
+
+}
 /* header=================== */
+
 #header{
     position: fixed;
     top: 0;
@@ -178,12 +205,7 @@ html{
     padding: 32px 0;
     /* overflow: hidden; */
 }
-#content .member-item{
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
 
-}
 #content .member-name{
     margin: 15px 0;
 }
@@ -223,15 +245,10 @@ html{
 /* =======Place===== */
 .place-list{
     padding: 32px 0;
-    margin: 0 -8px
+
     
 }
-.place-item{
-    float: left;
-    width: 33.3333%;  
-    padding: 0 8px;
-    margin-bottom: 16px;
-}
+
 .place-avt{
     width: 100%; 
     vertical-align: middle;  
