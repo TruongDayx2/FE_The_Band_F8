@@ -85,7 +85,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-date">Fri 27 Nov 2016</p>
                                 <p class="place-decription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="buy-btn">Buy Tickets</a>
+                                <button class="buy-btn js-buy-tickets">Buy Tickets</button>
                                 <!-- dấu # ở trên là khi ko có link t sẽ ở lại trang đó  -->
                             </div>
                         </div>
@@ -95,7 +95,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-date">Sat 28 Nov 2016</p>
                                 <p class="place-decription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="buy-btn">Buy Tickets</a>
+                                <button class="buy-btn js-buy-tickets">Buy Tickets</button>
                                 <!-- dấu # ở trên là khi ko có link t sẽ ở lại trang đó  -->
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-date">Sun 29 Nov 2016</p>
                                 <p class="place-decription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="buy-btn">Buy Tickets</a>
+                                <button class="buy-btn js-buy-tickets">Buy Tickets</button>
                                 <!-- dấu # ở trên là khi ko có link t sẽ ở lại trang đó  -->
                             </div>
                         </div>
@@ -125,9 +125,9 @@
         </div>
 
     </div>
-    <div class="model">
-        <div class="model-container">
-            <div class="model-close">
+    <div class="model js-model">
+        <div class="model-container js-model-container">
+            <div class="model-close js-model-close">
                 <i class="ti-close"></i>
             </div>
 
@@ -159,5 +159,31 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-tickets')
+        const model = document.querySelector('.js-model')
+        const modelContainer = document.querySelector('.js-model-container')
+        const modelClose = document.querySelector('.js-model-close')
+
+        function showBuyTickets(){
+            model.classList.add('open')
+        }
+
+        function hideBuyTickets(){
+            model.classList.remove('open')
+        }
+        
+        for (const buyBtn of buyBtns){
+            buyBtn.addEventListener('click',showBuyTickets)
+        }
+
+        modelClose.addEventListener('click',hideBuyTickets)
+        model.addEventListener('click',hideBuyTickets)
+        modelContainer.addEventListener('click',function(event){
+            event.stopPropagation()
+        })
+
+    </script>
 </body>
 </html>
