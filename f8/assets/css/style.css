@@ -25,10 +25,20 @@ html{
 
 }
 
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .col{
     float:left;
     padding-left: 8px;
     padding-right: 8px;
+}
+
+.col-full{
+    width: 100%;
 }
 
 .col-half{
@@ -37,6 +47,14 @@ html{
 
 .col-third{
     width: 33.3333%;
+}
+
+.mt-8{
+    margin-top: 8px !important; 
+}
+
+.mt-16{
+    margin-top: 16px !important;
 }
 
 /* main====== */
@@ -391,6 +409,39 @@ html{
     }
 }
 
+/* contact========== */
+.contact-content{
+    margin-top: 48px;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+/* tất cả thẻ i có class là ti-  */
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 7px;
+    border: solid 1px #ccc;
+    width: 100%;
+}
+
+.contact-form .form-submit-btn{
+    padding: 10px 18px;
+    background: #000;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    float: right;
+}
 /* ============================= footer */
 #footer{
 
