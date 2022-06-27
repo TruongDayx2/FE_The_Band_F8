@@ -197,10 +197,14 @@ html{
 }
 /* === The Band==== */
 #content .content-section{
-    max-width: 900px;
+    width: 800px;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    /* rps for tablet */
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
     
 }
 #content .section-head{
