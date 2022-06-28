@@ -88,14 +88,14 @@ html{
 #nav > li > a{
     color: #fff;
     text-transform: uppercase;
-    display: inline-block;
+   
     line-height: 46px;
     padding: 0 24px;
 }
 
 #nav li a{   
     text-decoration: none;
-    
+    display:block;
 }
 
 #nav{
@@ -139,12 +139,15 @@ html{
     font-size: 14px;
 }
 
+
+
 .mobile-menu-btn,
 .search-btn{
     float:right;
     display: block;
     cursor: pointer;
 }
+
 
 .mobile-menu-btn:hover,
 .search-btn:hover .head-search{
@@ -160,6 +163,13 @@ html{
     padding: 0 24px;
     color: #fff;
     
+}
+
+.mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 /* ------------------------------ */
@@ -484,13 +494,31 @@ html{
 /* Mobile */
 @media (max-width:740px){
 
-#nav li{
-    display: block;
-}
+    #nav{
+        display: block;
+    }
 
-.search-btn{
-    display: none;
-}
+    #nav > li{
+        display: block;
+    }
+
+    #nav >li:hover >a {
+        color: #ccc;
+        background-color: #000;
+    }
+
+    /* lấy thằng li đầu tiên của thẻ nav  */
+    #nav > li:first-child{
+        display: inline-block;
+    }
+
+    .mobile-menu-btn{
+        display: block;
+    }
+
+    .search-btn{
+        display: none;
+    }
 
 
 }
