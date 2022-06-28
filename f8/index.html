@@ -35,6 +35,9 @@
             <div class="search-btn">
                 <i class="head-search ti-search"></i>
             </div>
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="ti-menu"></i>
+            </div>
             <!-- end search -->
         </div>
         <div id="slider">
@@ -227,6 +230,36 @@
             event.stopPropagation()
         })
 
+    </script>
+
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        // Đóng mở mobile menu
+        mobileMenu.onclick = function (){
+            // kiểm tra độ dài của header
+            // console.log(header.clientHeight);
+            var isClose = header.clientHeight === headerHeight ;
+            if (isClose){
+                header.style.height = 'auto';
+            } else{
+                header.style.height = null;
+            }
+        }
+
+        // Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
+        // console.log(menuItems);
+        for (var i = 0; i < menuItems.length; i++){
+            var menuItem = menuItems[i];
+            // console.log(menuItem);
+            menuItem.onclick = function(){
+                header.style.height = null;
+
+            }
+        }
     </script>
 </body>
 </html>

@@ -76,6 +76,8 @@ html{
     height: 46px;
     background-color: #000;
     z-index: 10;
+    /* bug */
+    overflow: hidden;
 }
 
 #nav li{
@@ -137,16 +139,19 @@ html{
     font-size: 14px;
 }
 
+.mobile-menu-btn,
 .search-btn{
     float:right;
     display: block;
     cursor: pointer;
 }
 
+.mobile-menu-btn:hover,
 .search-btn:hover .head-search{
     background-color: #f44336;
 }
 
+.mobile-menu-btn,
 .search-btn .head-search{
     display: inline-block;
     line-height: 46px;
@@ -473,4 +478,19 @@ html{
 
 #footer .copyright a{
     color: rgba(0,0,0,0.6);
+}
+
+/* responsive */
+/* Mobile */
+@media (max-width:740px){
+
+#nav li{
+    display: block;
+}
+
+.search-btn{
+    display: none;
+}
+
+
 }
