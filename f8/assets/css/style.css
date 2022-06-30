@@ -76,8 +76,7 @@ html{
     height: 46px;
     background-color: #000;
     z-index: 10;
-    /* bug */
-    overflow: hidden;
+
 }
 
 #nav li{
@@ -494,12 +493,38 @@ html{
 /* Mobile */
 @media (max-width:740px){
 
+    #header{
+        overflow: hidden;
+    }
+
+    .mobile-menu-btn{
+        display: block;
+    }
+
+    .search-btn{
+        display: none;
+    }
+
     #nav{
         display: block;
     }
 
     #nav > li{
         display: block;
+    }
+
+    #nav li a{
+        padding: 1px 24px;
+    }
+
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px;
     }
 
     #nav >li:hover >a {
@@ -512,13 +537,7 @@ html{
         display: inline-block;
     }
 
-    .mobile-menu-btn{
-        display: block;
-    }
-
-    .search-btn{
-        display: none;
-    }
+    
 
 
 }

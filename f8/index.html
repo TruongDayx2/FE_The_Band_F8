@@ -226,6 +226,7 @@
 
         modelClose.addEventListener('click',hideBuyTickets)
         model.addEventListener('click',hideBuyTickets)
+        // Dừng sự kiện nổi bọt
         modelContainer.addEventListener('click',function(event){
             event.stopPropagation()
         })
@@ -254,9 +255,20 @@
         // console.log(menuItems);
         for (var i = 0; i < menuItems.length; i++){
             var menuItem = menuItems[i];
+            // Kiểm tra phần tử anh chị em liền kề có hay ko
+
+
             // console.log(menuItem);
-            menuItem.onclick = function(){
-                header.style.height = null;
+            menuItem.onclick = function(event){
+                // this là thẻ ta click vào
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+            
+                if(isParentMenu){
+                    // bỏ dấu # trong thẻ a href - bỏ mặc định 
+                    event.preventDefault();
+                }else {
+                    header.style.height = null;
+                }
 
             }
         }
